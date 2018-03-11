@@ -46,6 +46,7 @@ void usun()
 
 }
 
+
 void wyswietl_kolejke()
 {
 
@@ -78,6 +79,23 @@ void wyswietl_kolejke()
 
 
 }
+
+
+void wielkosc()
+{
+    cout<<endl<<"Liczba elementow w kolejce: "<<rozmiar;
+    Sleep(1000);
+
+}
+
+void czy_pusta()
+{
+
+    if (rozmiar==0) cout<<endl<<"kolejka pusta";
+    else cout<<endl<<"wystepuja elementy";
+    Sleep(1000);
+}
+
 int main(){
 
     int wybor;
@@ -88,13 +106,15 @@ int main(){
 
 
 
-        cout<<"glowa="<<glowa<<"   ogon="<<ogon<<"   rozmiar="<<rozmiar<<endl<<endl;
+        // cout<<"glowa="<<glowa<<"   ogon="<<ogon<<"   rozmiar="<<rozmiar<<endl<<endl;
 
         cout << "MENU GLOWNE KOLEJKI:"<<endl;
         cout << "******************"<<endl;
         cout << "1. Dodaj element "<<endl;
         cout << "2. usun element "<<endl;
-        cout << "3. koniec "<<endl;
+       cout << "3. rozmiar kolejki "<<endl;
+        cout << "4. czy kolejka jest pusta? "<<endl;
+        cout << "5. Koniec programu "<<endl;
         cout << "wybor opcji: ";
         cin >> wybor;
 
@@ -108,9 +128,17 @@ int main(){
 
         case 2:
             usun();
-            break;}
+            break;
+              case 3:
+            wielkosc();
+            break;
+
+        case 4:
+            czy_pusta();
+            break;
+            }
 }
-            while (wybor!=3);
+            while (wybor!=5);
 
 return 0;
 }
