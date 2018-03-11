@@ -49,7 +49,7 @@ void usun()
 
 void wyswietl_kolejke()
 {
-
+system("CLS");
     cout<<endl;
     cout<<"******************"<<endl;
     cout<<"*LICZBY W KOLEJCE*:"<<endl;
