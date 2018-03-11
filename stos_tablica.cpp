@@ -4,10 +4,65 @@
 
 using namespace std;
 
-int dane [6];
+int stos [6];
 int rozmiar;
 
+void wyswietl_stos()
+{
+    system("CLS");
 
+
+    cout<<endl;
+    cout<<"*******************"<<endl;
+    cout<<"*ZAWARTOSC STOSU: *"<<endl;
+    cout<<"******************"<<endl;
+
+    for (int i=rozmiar; i>=1; i--)
+    {
+        cout<<stos[i]<<endl;
+    }
+
+    if (rozmiar==0) cout<<"pusty"<<endl;
+
+    cout << "******************"<<endl<<endl;
+
+}
+
+//------------------------------------------------------------------------
+
+void dodaj()
+{
+    if (rozmiar>=5)
+    {
+        cout << "Stos pelny!";
+        Sleep(1000);
+    }
+    else
+    {
+        cout<<endl<< "podaj jaka liczbe chcesz dodac : ";
+
+        rozmiar=rozmiar+1;
+        cin>>stos[rozmiar];
+    }
+}
+
+//------------------------------------------------------------------------
+
+void usun()
+{
+    if (rozmiar>=1)
+    {
+        cout<<endl<<"usuwanie liczby: "<<stos[rozmiar];
+        Sleep(1000);
+
+        rozmiar=rozmiar-1;
+    }
+    else
+    {
+        cout << "Stos pusty!";
+        Sleep(1000);
+    }
+}
 void wielkosc()
 {
     cout<<endl<<"Liczba elementow na stosie: "<<rozmiar;
@@ -28,7 +83,7 @@ int main ()
 
 
     do{
-        //wyswietl_stos();
+        wyswietl_stos();
 
 
         cout << "MENU GLOWNE STOSU:"<<endl;
@@ -46,11 +101,11 @@ int main ()
         switch (wybor)
         {
         case 1:
-          //  dodaj();
+           dodaj();
             break;
 
         case 2:
-           // usun();
+        usun();
             break;
               case 3:
             wielkosc();
