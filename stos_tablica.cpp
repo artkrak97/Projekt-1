@@ -86,6 +86,7 @@ int main ()
         wyswietl_stos();
 
 
+
         cout << "MENU GLOWNE STOSU:"<<endl;
         cout << "******************"<<endl;
         cout << "1. Dodaj element "<<endl;
