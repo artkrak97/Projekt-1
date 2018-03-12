@@ -22,7 +22,7 @@ void dodaj()
         cout<<endl<< "podaj liczbe do dodania: ";
         cin>>kolejka[ogon];
         ogon=(ogon+1)%6;
-        rozmiar++;
+        rozmiar=rozmiar+1;
     }
 }
 
@@ -46,6 +46,30 @@ void usun()
 
 }
 
+void usun_wszystko()
+{
+    if (rozmiar==0)
+    {
+        cout<<"brak elementow w kolejce!";
+        Sleep(1000);
+    }
+    else
+    {
+
+
+        for (int i=0; rozmiar=0; i++)
+        {
+
+      //     cout<<kolejka[i]<<" ";
+      //  cout<<endl<<"usuwanie elementu z kolejki: "<<kolejka[i];
+
+        rozmiar=rozmiar-1;
+		Sleep(1000);
+        }
+    }
+
+
+}
 
 void wyswietl_kolejke()
 {
@@ -114,7 +138,8 @@ int main(){
         cout << "2. usun element "<<endl;
        cout << "3. rozmiar kolejki "<<endl;
         cout << "4. czy kolejka jest pusta? "<<endl;
-        cout << "5. Koniec programu "<<endl;
+        cout << "5. usun wszystkie "<<endl;
+        cout << "6. Koniec programu "<<endl;
         cout << "wybor opcji: ";
         cin >> wybor;
 
@@ -136,9 +161,13 @@ int main(){
         case 4:
             czy_pusta();
             break;
+
+            case 5:
+            usun_wszystko();
+            break;
             }
 }
-            while (wybor!=5);
+            while (wybor!=6);
 
 return 0;
 }
