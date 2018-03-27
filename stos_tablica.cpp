@@ -7,6 +7,31 @@ using namespace std;
 int stos [6];
 int rozmiar;
 
+void usun_wszystko()
+{
+    if (rozmiar==0)
+    {
+        cout<<"brak elementow na stosie!";
+        Sleep(1000);
+    }
+    else
+    {
+
+
+        for (int i=0; rozmiar=0; i++)
+        {
+
+      //     cout<<kolejka[i]<<" ";
+      //  cout<<endl<<"usuwanie elementu z kolejki: "<<kolejka[i];
+
+        rozmiar=rozmiar-1;
+		Sleep(1000);
+        }
+    }
+
+
+}
+
 void wyswietl_stos()
 {
     system("CLS");
@@ -93,7 +118,8 @@ int main ()
         cout << "2. usun element "<<endl;
        cout << "3. rozmiar stosu "<<endl;
         cout << "4. czy stos jest pusty? "<<endl;
-        cout << "5. Koniec programu "<<endl;
+        cout << "5. usun wszystko " << endl;
+        cout << "6. Koniec programu "<<endl;
         cout << "wybor opcji: ";
         cin >> wybor;
 
@@ -115,8 +141,10 @@ int main ()
         case 4:
             czy_pusty();
             break;
+        case 5:
+            usun_wszystko();
             }
 }
-            while (wybor!=5);
+            while (wybor!=6);
     return 0;
 }
